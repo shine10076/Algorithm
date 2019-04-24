@@ -1,0 +1,7 @@
+
+jsquid:S00101	"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(äÕşüøÿÿÿÿ
+ssquid:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(©¾¤¤ıÿÿÿÿ8Ò¿êŸ-
+ssquid:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(©¾¤¤ıÿÿÿÿ8Ò¿êŸ-
+nsquid:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(à·úÕ8Ò¿êŸ-
+qsquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(¤ Ëıÿÿÿÿ8Ò¿êŸ-
+nsquid:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(à·úÕ8Ò¿êŸ-

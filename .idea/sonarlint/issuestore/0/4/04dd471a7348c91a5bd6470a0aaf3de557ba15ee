@@ -1,0 +1,5 @@
+
+Vsquid:S18548"8Remove this useless assignment to local variable "root".(„î°8İ–ªÀŸ-
+ysquid:S1488"[Immediately return this expression instead of assigning it to the temporary variable "res".(‹ò€8ÚÏ¢ÀŸ-
+Gsquid:S14818")Remove this unused "root" local variable.(„î°8İ–ªÀŸ-
+jsquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Ê¨¬ßıÿÿÿÿ

@@ -1,0 +1,12 @@
+
+Lsquid:S21401")Use "java.util.Random.nextInt()" instead.(Ë¦ã×ùÿÿÿÿ8å€Ä°¢-
+Xsquid:S1118	":Add a private constructor to hide the implicit public one.(Ñš‰ü8«Ûë¸Ÿ-
+Gsquid:S2140'")Use "java.util.Random.nextInt()" instead.(¬ÉÖï8«Ûë¸Ÿ-
+Gsquid:S2140)")Use "java.util.Random.nextInt()" instead.(ŠÓŸÏ8«Ûë¸Ÿ-
+[
+squid:S106d"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8«Ûë¸Ÿ-
+Gsquid:S2140)")Use "java.util.Random.nextInt()" instead.(ŠÓŸÏ8«Ûë¸Ÿ-
+V
+squid:S106b"9Replace this use of System.out or System.err by a logger.(º¼É°8«Ûë¸Ÿ-
+Zsquid:S2589K"7Remove this expression which always evaluates to "true"(Äƒ“ÿÿÿÿÿ8«Ûë¸Ÿ-
+Dsquid:S11688"&Return an empty array instead of null.(¥¹ï8«Ûë¸Ÿ-

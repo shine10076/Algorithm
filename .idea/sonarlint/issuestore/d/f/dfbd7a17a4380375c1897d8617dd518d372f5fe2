@@ -1,0 +1,9 @@
+
+usquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£øŒÈúÿÿÿÿ8üªœ” -
+V
+squid:S106$"9Replace this use of System.out or System.err by a logger.(¾Â€ü8»˜¾® -
+Xsquid:S1191"5Use classes from the Java API instead of Sun classes.(ò«Æûÿÿÿÿ8ÍÈ’³ -
+usquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£øŒÈúÿÿÿÿ8üªœ” -
+^squid:UselessImportCheck".Remove this unused import 'sun.misc.LRUCache'.(ò«Æûÿÿÿÿ8ÍÈ’³ -
+dsquid:S00101	"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(öÃ
+Bsquid:S1659"Declare "R" on a separate line.(£øŒÈúÿÿÿÿ8üªœ” -

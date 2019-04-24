@@ -1,0 +1,6 @@
+
+Xsquid:S1118":Add a private constructor to hide the implicit public one.(èšÃÅ8şıÕÀŸ-
+`squid:UnusedPrivateMethod
+"4Remove this unused private "bstFromPreorder" method.(†Âçà8şıÕÀŸ-
+esquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(èšÃÅ
+zsquid:S1488"\Immediately return this expression instead of assigning it to the temporary variable "root".(µ²”¿8Õ¤‡ÁŸ-

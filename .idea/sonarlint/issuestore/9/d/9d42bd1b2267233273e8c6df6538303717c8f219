@@ -1,0 +1,21 @@
+
+[
+squid:S106n"9Replace this use of System.out or System.err by a logger.(õ¡‹¾ûÿÿÿÿ8š‘•ŞŸ-
+Dsquid:S1168H"&Return an empty array instead of null.(¥¹ï8š‘•ŞŸ-
+V
+squid:S106W"9Replace this use of System.out or System.err by a logger.(º¼É°8š‘•ŞŸ-
+osquid:S1223
+"LRename this method to prevent any misunderstanding or make it a constructor.(¬›ÿ’şÿÿÿÿ8´¶äİŸ-
+>squid:S3626"Remove this redundant jump.(¢ÔÊéøÿÿÿÿ8ëéİŸ-
+psquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ Ğí8ïŒÿİŸ-
+psquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ Ğí8ïŒÿİŸ-
+jsquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ê±Àıÿÿÿÿ
+Jsquid:S1068	"'Remove this unused "TWO" private field.(²â¡Òşÿÿÿÿ8´¶äİŸ-
+Gsquid:S2140@")Use "java.util.Random.nextInt()" instead.(ŠÓŸÏ8š‘•ŞŸ-
+psquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò»äæ8ÚÂçİŸ-
+jsquid:S1223"LRename this method to prevent any misunderstanding or make it a constructor.(ò»äæ8ÚÂçİŸ-
+Gsquid:S2140@")Use "java.util.Random.nextInt()" instead.(ŠÓŸÏ8š‘•ŞŸ-
+[
+squid:S106Y"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8š‘•ŞŸ-
+Gsquid:S2140>")Use "java.util.Random.nextInt()" instead.(¬ÉÖï8š‘•ŞŸ-
+psquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò»äæ8ÚÂçİŸ-

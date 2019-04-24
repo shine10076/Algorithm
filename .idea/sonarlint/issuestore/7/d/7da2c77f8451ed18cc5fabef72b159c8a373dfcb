@@ -1,0 +1,8 @@
+
+V
+squid:S106/"9Replace this use of System.out or System.err by a logger.(¶³ïØ8ô‚«“ -
+psquid:S3776	"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(›è–8ŠŞĞ“ -
+usquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃÈäúÿÿÿÿ8´ìà’ -
+usquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃÈäúÿÿÿÿ8´ìà’ -
+esquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(• ×ö
+Bsquid:S1659"Declare "R" on a separate line.(ÃÈäúÿÿÿÿ8´ìà’ -

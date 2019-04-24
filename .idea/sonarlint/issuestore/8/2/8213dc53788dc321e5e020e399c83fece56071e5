@@ -1,0 +1,6 @@
+
+osquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(น฿\8เสþก-
+osquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(น฿\8อุคþก-
+osquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(น฿\8อุคþก-
+jsquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ฟีÿÿÿÿÿ
+]squid:S1118":Add a private constructor to hide the implicit public one.(ฟีÿÿÿÿÿ8ลÿก-
