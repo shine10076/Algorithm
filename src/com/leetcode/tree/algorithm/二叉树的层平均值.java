@@ -18,7 +18,8 @@ public class 二叉树的层平均值 {
         queue.offer(root);
         while(!queue.isEmpty())
         {
-            while(!queue.isEmpty()) floor.offer(queue.poll());
+            while(!queue.isEmpty())
+            {floor.offer(queue.poll());}
             /*每一层的平均值*/
             int count  = 0;
             double sum = 0;

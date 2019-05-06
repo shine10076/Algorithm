@@ -5,7 +5,7 @@ package com.sort.algorithm;
  * @date 2019/4/7 19:39
  * 选择排序
  */
-public class codeSelectionSort extends Sort {
+public class selectionSort extends Sort {
     public static final int TWO = 2;
 
     public static void selectionSort(int[] arr){
