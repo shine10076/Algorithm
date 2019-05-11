@@ -6,6 +6,12 @@ package com.leetcode.array.algorithm;
  */
 public class 搜索二维矩阵 {
 
+    /**
+     * 从右上角开始找，
+     * @param matrix
+     * @param target
+     * @return
+     */
     public static boolean searchMatrix(int[][] matrix, int target) {
         if(matrix == null || matrix.length == 0 || matrix[0].length == 0)
         { return false;}
