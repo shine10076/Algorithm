@@ -8,7 +8,17 @@ public class ListNode {
     int val;
     ListNode next;
     ListNode(int x){
-        int val = x;
+         this.val = x;
         next = null;
+    }
+
+    public void printList()
+    {
+        ListNode cur = this;
+        while(cur != null)
+        {
+            System.out.print(cur.val+" ");
+            cur = cur.next;
+        }
     }
 }

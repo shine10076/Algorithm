@@ -19,7 +19,7 @@ public class 回文链表 {
         ListNode n1 = head;
         ListNode n2 = head;
         /**
-         * 为了寻找中点
+         * 为了寻找中点，奇数个节点找到中点，偶数个点找到前半段的最后一个点
          */
         while(n1.next != null && n2.next.next != null)
         {
