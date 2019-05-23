@@ -39,7 +39,7 @@ public class 寻找旋转数组中的最小值 {
                 R =mid -1;
             }
         }
-        return nums[0];
+        return nums[L];
     }
 
     public static void main(String[] args)
