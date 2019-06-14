@@ -1,4 +1,4 @@
-package com.leetcode.bitCount.algorithm;
+package com.leetcode.bit.algorithm;
 
 /**
  * @author shine10076
