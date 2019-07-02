@@ -16,22 +16,21 @@ public class 二叉树的层平均值 {
         Queue<TreeNode> queue = new LinkedList<>();
         Queue<TreeNode> floor = new LinkedList<>();
         queue.offer(root);
-        while(!queue.isEmpty())
-        {
-            while(!queue.isEmpty())
-            {floor.offer(queue.poll());}
-            /*每一层的平均值*/
-            int count  = 0;
-            double sum = 0;
-            while(!floor.isEmpty())
-            {
-                TreeNode node = floor.poll();
-                sum  += node.val;
-                count++;
-                if(node.left != null) queue.offer(node.left);
-                if(node.right != null) queue.offer(node.right);
+        while (!queue.isEmpty()) {
+            while (!queue.isEmpty()) {
+                floor.offer(queue.poll());
             }
-            double avg = sum/count;
+            /*每一层的平均值*/
+            int count = 0;
+            double sum = 0;
+            while (!floor.isEmpty()) {
+                TreeNode node = floor.poll();
+                sum += node.val;
+                count++;
+                if (node.left != null) queue.offer(node.left);
+                if (node.right != null) queue.offer(node.right);
+            }
+            double avg = sum / count;
             list.add(avg);
         }
         return list;

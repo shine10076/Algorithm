@@ -9,28 +9,20 @@ import java.util.Stack;
 public class 有效的括号 {
 
     public boolean isValid(String s) {
-        if(s == null) return true;
+        if (s == null) return true;
         Stack<Character> stack = new Stack<>();
         char[] sb = s.toCharArray();
-        for(int i=0;i<s.length();i++)
-        {
-            if(sb[i]=='('||sb[i]=='{'||sb[i]=='[' )
-            {
+        for (int i = 0; i < s.length(); i++) {
+            if (sb[i] == '(' || sb[i] == '{' || sb[i] == '[') {
                 stack.push(sb[i]);
-            }
-            else if(sb[i]==')')
-            {
-                if(stack.isEmpty()||stack.pop()!='(')
+            } else if (sb[i] == ')') {
+                if (stack.isEmpty() || stack.pop() != '(')
                     return false;
-            }
-            else if(sb[i]=='}')
-            {
-                if(stack.isEmpty()||stack.pop() !='{')
+            } else if (sb[i] == '}') {
+                if (stack.isEmpty() || stack.pop() != '{')
                     return false;
-            }
-            else if(sb[i] == ']')
-            {
-                if(stack.isEmpty()||stack.pop()!='[')
+            } else if (sb[i] == ']') {
+                if (stack.isEmpty() || stack.pop() != '[')
                     return false;
             }
         }

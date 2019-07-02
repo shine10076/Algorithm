@@ -27,7 +27,7 @@ public class 非递减数列 {
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{2,3,3,2,4};
+        int[] nums = new int[]{2, 3, 3, 2, 4};
         System.out.println(checkPossibility(nums));
     }
 }

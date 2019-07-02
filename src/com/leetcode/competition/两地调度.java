@@ -13,10 +13,9 @@ public class 两地调度 {
         //将a市和b市的费用相减
         int m = costs.length;
         List<Three> list = new ArrayList<>();
-        for(int i=0;i<m;i++)
-        {
+        for (int i = 0; i < m; i++) {
             int diff = costs[i][0] - costs[i][1];
-            list.add(new Three(diff,costs[i][0], costs[i][1]));
+            list.add(new Three(diff, costs[i][0], costs[i][1]));
         }
         Collections.sort(list, new Comparator<Three>() {
             @Override
@@ -25,22 +24,20 @@ public class 两地调度 {
             }
         });
         int sum = 0;
-        for(int i=0;i<m/2;i++)
-        {
+        for (int i = 0; i < m / 2; i++) {
             sum += list.get(i).getA();
         }
-        for(int i=m/2;i<m;i++)
-        {
+        for (int i = m / 2; i < m; i++) {
             sum += list.get(i).getB();
         }
         return sum;
     }
 
-    class Three
-    {
+    class Three {
         int diff;
         int a;
         int b;
+
         public Three(int diff, int a, int b) {
             this.diff = diff;
             this.a = a;

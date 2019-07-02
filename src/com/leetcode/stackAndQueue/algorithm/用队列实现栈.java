@@ -14,49 +14,55 @@ public class 用队列实现栈 {
         private Queue<Integer> queue1;
         private Queue<Integer> queue2;
 
-        /** Initialize your data structure here. */
+        /**
+         * Initialize your data structure here.
+         */
         public MyStack() {
             queue1 = new LinkedList<>();
             queue2 = new LinkedList<>();
         }
 
-        /** Push element x onto stack. */
+        /**
+         * Push element x onto stack.
+         */
         public void push(int x) {
             queue1.offer(x);
         }
 
-        /** Removes the element on top of the stack and returns that element. */
+        /**
+         * Removes the element on top of the stack and returns that element.
+         */
         public int pop() {
-            while(queue1.size()>1)
-            {
+            while (queue1.size() > 1) {
                 queue2.offer(queue1.poll());
             }
             int res = queue1.poll();
-            while(!queue2.isEmpty())
-            {
+            while (!queue2.isEmpty()) {
                 queue1.offer(queue2.poll());
             }
             return res;
         }
 
-        /** Get the top element. */
+        /**
+         * Get the top element.
+         */
         public int top() {
-            while(queue1.size()>1)
-            {
+            while (queue1.size() > 1) {
                 queue2.offer(queue1.poll());
             }
             int res = queue1.poll();
-            while(!queue2.isEmpty())
-            {
+            while (!queue2.isEmpty()) {
                 queue1.offer(queue2.poll());
             }
             queue1.offer(res);
             return res;
         }
 
-        /** Returns whether the stack is empty. */
+        /**
+         * Returns whether the stack is empty.
+         */
         public boolean empty() {
-            return queue1.isEmpty()&&queue1.isEmpty();
+            return queue1.isEmpty() && queue1.isEmpty();
         }
     }
 

@@ -38,6 +38,6 @@ public class 删除字母匹配最长单词 {
     }
 
     public static void main(String[] args) {
-        System.out.println(isWord("abpcplea","a"));
+        System.out.println(isWord("abpcplea", "a"));
     }
 }

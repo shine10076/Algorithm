@@ -14,16 +14,14 @@ public class 非递归二叉树中序遍历 {
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
-        if(root == null) return list;
+        if (root == null) return list;
         TreeNode cur = root;
-        while(cur != null || !stack.isEmpty())
-        {
-            while(cur != null)
-            {
+        while (cur != null || !stack.isEmpty()) {
+            while (cur != null) {
                 stack.push(cur);
                 cur = cur.left;
             }
-            TreeNode node  = stack.pop();
+            TreeNode node = stack.pop();
             list.add(node.val);
             cur = node.right;
         }

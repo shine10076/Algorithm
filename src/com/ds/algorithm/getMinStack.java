@@ -8,7 +8,7 @@ import java.util.Stack;
  */
 public class getMinStack {
 
-    public static class minStack{
+    public static class minStack {
         private Stack<Integer> stackData;
         private Stack<Integer> stackMin;
 

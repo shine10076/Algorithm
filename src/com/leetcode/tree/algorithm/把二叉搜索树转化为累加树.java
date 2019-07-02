@@ -9,14 +9,12 @@ import java.util.Stack;
 public class 把二叉搜索树转化为累加树 {
 
     public TreeNode convertBST(TreeNode root) {
-        if(root == null) return null;
+        if (root == null) return null;
         Stack<TreeNode> stack = new Stack<>();
         TreeNode cur = root;
         int sum = 0;
-        while(cur != null || !stack.isEmpty())
-        {
-            while(cur != null)
-            {
+        while (cur != null || !stack.isEmpty()) {
+            while (cur != null) {
                 stack.push(cur);
                 cur = cur.right;
             }

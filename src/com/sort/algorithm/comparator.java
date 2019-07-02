@@ -10,7 +10,7 @@ import java.util.PriorityQueue;
  */
 public class comparator {
 
-    public static class Student{
+    public static class Student {
         public String name;
         public int id;
         public int age;
@@ -70,7 +70,7 @@ public class comparator {
         Student student2 = new Student("B", 2, 21);
         Student student3 = new Student("C", 3, 22);
 
-        Student[] students = new Student[] { student3, student2, student1 };
+        Student[] students = new Student[]{student3, student2, student1};
         printStudents(students);
 
         Arrays.sort(students, new IdAscendingComparator());

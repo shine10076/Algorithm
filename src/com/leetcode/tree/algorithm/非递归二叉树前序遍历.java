@@ -10,18 +10,17 @@ import java.util.Stack;
  */
 public class 非递归二叉树前序遍历 {
 
-    public List<Integer> preorderTraversal(TreeNode root){
+    public List<Integer> preorderTraversal(TreeNode root) {
 
         List<Integer> list = new ArrayList<>();
-        if(root == null) return list;
+        if (root == null) return list;
         Stack<TreeNode> stack = new Stack<>();
         stack.push(root);
-        while (!stack.isEmpty())
-        {
+        while (!stack.isEmpty()) {
             TreeNode node = stack.pop();
             list.add(node.val);
-            if(node.right != null) stack.push(node.right);
-            if(node.left != null) stack.push(node.left);
+            if (node.right != null) stack.push(node.right);
+            if (node.left != null) stack.push(node.left);
         }
         return list;
 

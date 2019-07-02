@@ -13,18 +13,15 @@ public class 分配饼干 {
         Arrays.sort(g);
         Arrays.sort(s);
         int index = 0;
-        for(int bis : s)
-        {
-            if(bis>=g[index])
-            {
+        for (int bis : s) {
+            if (bis >= g[index]) {
                 index++;
-                if(index>=g.length)
-                {
+                if (index >= g.length) {
                     break;
                 }
             }
         }
-        return index+1;
+        return index + 1;
     }
 
 }

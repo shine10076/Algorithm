@@ -17,47 +17,36 @@ public class 二叉搜索树中的众数 {
         List<Integer> list = new ArrayList<>();
         dps(root, list);
         int[] res = new int[list.size()];
-        for(int i = 0;i<list.size();i++)
-        {
+        for (int i = 0; i < list.size(); i++) {
             res[i] = list.get(i);
         }
         return res;
     }
 
-    private void dps(TreeNode root, List<Integer> list)
-    {
-        if(root == null) return;
-        dps(root.left,list);
+    private void dps(TreeNode root, List<Integer> list) {
+        if (root == null) return;
+        dps(root.left, list);
 
-        if(preNode != null)
-        {
-            if(preNode.val == root.val)
-            {
+        if (preNode != null) {
+            if (preNode.val == root.val) {
                 curCnt++;
-            }
-            else
-            {
+            } else {
                 curCnt = 1;
             }
+        } else {
+            curCnt = 1;
+            maxCnt = 1;
         }
-        else
-        {
-            curCnt =1;
-            maxCnt =1;
-        }
-        if(maxCnt < curCnt)
-        {
+        if (maxCnt < curCnt) {
             list.clear();
             list.add(root.val);
             maxCnt = curCnt;
-        }
-        else if(maxCnt == curCnt)
-        {
+        } else if (maxCnt == curCnt) {
             list.add(root.val);
         }
 
         preNode = root;
-        dps(root.right,list);
+        dps(root.right, list);
 
     }
 }

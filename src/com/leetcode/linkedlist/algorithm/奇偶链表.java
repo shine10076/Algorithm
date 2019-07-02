@@ -15,15 +15,11 @@ public class 奇偶链表 {
         ListNode evenHead = even;
         ListNode cur = head;
         boolean isOdd = true;
-        while(cur != null)
-        {
-            if(isOdd)
-            {
+        while (cur != null) {
+            if (isOdd) {
                 odd.next = cur;
                 odd = odd.next;
-            }
-            else
-            {
+            } else {
                 even.next = cur;
                 even = even.next;
             }
@@ -36,11 +32,10 @@ public class 奇偶链表 {
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{1,2,3,4,5};
+        int[] nums = new int[]{1, 2, 3, 4, 5};
         ListNode head = new ListNode(100);
         ListNode cur = head;
-        for(int i=0;i<nums.length;++i)
-        {
+        for (int i = 0; i < nums.length; ++i) {
             cur.next = new ListNode(nums[i]);
             cur = cur.next;
         }

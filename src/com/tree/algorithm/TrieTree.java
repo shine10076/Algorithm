@@ -8,22 +8,22 @@ import sun.reflect.generics.tree.Tree;
  */
 public class TrieTree {
 
-    public static class TrieNode{
+    public static class TrieNode {
         public int path;
         public int end;
         public TrieNode[] nexts;
 
-        public TrieNode(){
+        public TrieNode() {
             path = 0;
             end = 0;
             nexts = new TrieNode[26];
         }
     }
 
-    public static class Trie{
+    public static class Trie {
         private TrieNode root;
 
-        public Trie(){
+        public Trie() {
             root = new TrieNode();
         }
 

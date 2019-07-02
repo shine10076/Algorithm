@@ -6,11 +6,9 @@ package com.leetcode.tree.algorithm;
  */
 public class 翻转二叉树 {
 
-    private static TreeNode invertTree(TreeNode root)
-    {
-        if(root == null) return null;
-        else
-        {
+    private static TreeNode invertTree(TreeNode root) {
+        if (root == null) return null;
+        else {
             invertTree(root.left);
             invertTree(root.right);
             TreeNode temp = root.left;
@@ -19,5 +17,5 @@ public class 翻转二叉树 {
             return root;
         }
     }
-    
+
 }

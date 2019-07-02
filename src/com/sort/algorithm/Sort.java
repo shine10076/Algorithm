@@ -11,31 +11,34 @@ public class Sort {
 
     /**
      * 使用位运算交换数组的两个值
+     *
      * @param arr
      * @param i
      * @param j
      */
-    public static void swap(int[] arr, int i, int j){
-        arr[i] = arr[i]^arr[j];
-        arr[j] = arr[i]^arr[j];
-        arr[i] = arr[i]^arr[j];
+    public static void swap(int[] arr, int i, int j) {
+        arr[i] = arr[i] ^ arr[j];
+        arr[j] = arr[i] ^ arr[j];
+        arr[i] = arr[i] ^ arr[j];
     }
 
     /**
      * for test
+     *
      * @param arr
      */
-    public static void comparator(int[] arr){
+    public static void comparator(int[] arr) {
         Arrays.sort(arr);
     }
 
     /**
      * 生成随机的数组输入
+     *
      * @param maxSize
      * @param maxValue
      * @return
      */
-    public static int[] generateRandomArray(int maxSize, int maxValue){
+    public static int[] generateRandomArray(int maxSize, int maxValue) {
         int[] arr = new int[(int) ((maxSize + 1) * Math.random())];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = (int) ((maxValue + 1) * Math.random()) - (int) (maxValue * Math.random());
@@ -51,12 +54,12 @@ public class Sort {
         return arr;
     }
 
-    public static int[] copyArray(int[] arr){
-        if(arr == null){
+    public static int[] copyArray(int[] arr) {
+        if (arr == null) {
             return null;
         }
         int[] res = new int[arr.length];
-        for (int i = 0;i < arr.length; i++){
+        for (int i = 0; i < arr.length; i++) {
             res[i] = arr[i];
         }
         return res;
@@ -64,6 +67,7 @@ public class Sort {
 
     /**
      * 比较两个数组是否相等
+     *
      * @param arr1
      * @param arr2
      * @return
@@ -88,6 +92,7 @@ public class Sort {
 
     /**
      * 打印数组
+     *
      * @param arr
      */
     public static void printArray(int[] arr) {

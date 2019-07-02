@@ -11,7 +11,7 @@ public class LRUCache {
 
     private int capacity;
     private int size;
-    private Map<Integer,LRUNode> map;
+    private Map<Integer, LRUNode> map;
     private LRUNode head;
     private LRUNode tail;
 
@@ -28,14 +28,11 @@ public class LRUCache {
     }
 
     public int get(int key) {
-        if(map.containsKey(key))
-        {
+        if (map.containsKey(key)) {
             LRUNode node = map.get(key);
             moveToHead(node);
             return node.val;
-        }
-        else
-        {
+        } else {
             return -1;
         }
     }
@@ -43,98 +40,85 @@ public class LRUCache {
     public void put(int key, int value) {
         LRUNode node = map.get(key);
 
-        if(node == null)
-        {
+        if (node == null) {
             node = new LRUNode(key, value);
             push(node);
-            map.put(key,node);
+            map.put(key, node);
 
-            if(size>capacity)
-            {
+            if (size > capacity) {
                 pop();
             }
-        }
-        else
-        {
+        } else {
             node.val = value;
             moveToHead(node);
         }
     }
 
-    private void push(LRUNode node)
-    {
-        node.pre =head;
+    private void push(LRUNode node) {
+        node.pre = head;
         node.next = head.next;
         head.next.pre = node;
         head.next = node;
         size++;
     }
 
-    private LRUNode pop(){
-        if(size >0)
-        {
+    private LRUNode pop() {
+        if (size > 0) {
             LRUNode node = tail.pre;
             delete(node);
             map.remove(node.key);
             return node;
-        }
-        else
-        {
+        } else {
             return null;
         }
     }
 
-    private void delete(LRUNode node){
+    private void delete(LRUNode node) {
 
-        node.pre.next= node.next;
+        node.pre.next = node.next;
         node.next.pre = node.pre;
         size--;
 
     }
 
-    private void moveToHead(LRUNode node)
-    {
+    private void moveToHead(LRUNode node) {
         delete(node);
         push(node);
     }
 
-    public void printList(){
+    public void printList() {
         LRUNode node = head;
-        while(node != tail)
-        {
+        while (node != tail) {
 
-            System.out.println(node.key +":"+node.val);
+            System.out.println(node.key + ":" + node.val);
             node = node.next;
         }
-        System.out.println("size="+size);
+        System.out.println("size=" + size);
     }
 
     public static void main(String[] args) {
         LRUCache cache = new LRUCache(2);
-        cache.put(1,1);
-        cache.put(2,2);
+        cache.put(1, 1);
+        cache.put(2, 2);
         cache.get(1);
-        cache.put(3,3);
+        cache.put(3, 3);
         cache.get(2);
-        cache.put(4,4);
+        cache.put(4, 4);
         cache.printList();
     }
 }
 
-class LRUNode
-{
+class LRUNode {
     int key;
     int val;
     LRUNode pre;
     LRUNode next;
 
-    LRUNode(int key, int val)
-    {
+    LRUNode(int key, int val) {
         this.key = key;
         this.val = val;
     }
 
-    LRUNode()
-    {
+    LRUNode() {
     }
 }

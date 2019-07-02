@@ -7,7 +7,7 @@ package com.leetcode.bit.algorithm;
 public class 汉明距离 {
 
     public int hammingDistance(int x, int y) {
-        int res  = x^y;
+        int res = x ^ y;
         return Integer.bitCount(res);
     }
 }

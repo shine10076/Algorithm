@@ -8,8 +8,8 @@ package com.sort.algorithm;
 public class selectionSort extends Sort {
     public static final int TWO = 2;
 
-    public static void selectionSort(int[] arr){
-        if(arr == null || arr.length < TWO){
+    public static void selectionSort(int[] arr) {
+        if (arr == null || arr.length < TWO) {
             return;
         }
         for (int i = 0; i < arr.length - 1; i++) {

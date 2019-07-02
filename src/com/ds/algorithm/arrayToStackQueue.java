@@ -8,13 +8,12 @@ import java.lang.reflect.Array;
  */
 public class arrayToStackQueue {
 
-    public static class ArrayStack{
+    public static class ArrayStack {
         private Integer[] arr;
         private Integer size;
 
-        public ArrayStack(int initSize)
-        {
-            if(initSize < 0){
+        public ArrayStack(int initSize) {
+            if (initSize < 0) {
                 throw new IllegalArgumentException("The init size is less than 0");
 
             }
@@ -44,16 +43,14 @@ public class arrayToStackQueue {
         }
     }
 
-    public static class ArrayQueue{
+    public static class ArrayQueue {
         private Integer[] arr;
         private Integer size;
         private Integer first;
         private Integer last;
 
-        public ArrayQueue(int initSize)
-        {
-            if(initSize < 0)
-            {
+        public ArrayQueue(int initSize) {
+            if (initSize < 0) {
                 throw new IllegalArgumentException("The init size is less than 0");
             }
             arr = new Integer[initSize];
@@ -62,28 +59,27 @@ public class arrayToStackQueue {
             last = 0;
         }
 
-        public Integer peek(){
-            if(size == 0) return null;
+        public Integer peek() {
+            if (size == 0) return null;
             return arr[first];
         }
 
-        public void push (int obj){
-            if(size == arr.length){
+        public void push(int obj) {
+            if (size == arr.length) {
                 throw new ArrayIndexOutOfBoundsException("the queue is full");
             }
             size++;
             arr[last] = obj;
-            last = last== arr.length-1?0:last+1;
+            last = last == arr.length - 1 ? 0 : last + 1;
         }
 
-        public Integer poll(){
-            if(size == 0)
-            {
+        public Integer poll() {
+            if (size == 0) {
                 throw new ArrayIndexOutOfBoundsException("the queue is empty");
             }
             size--;
             int tmp = first;
-            first = first == arr.length-1?0:first+1;
+            first = first == arr.length - 1 ? 0 : first + 1;
             return arr[first];
         }
     }
