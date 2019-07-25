@@ -2,6 +2,7 @@ package com.leetcode.backTrack.algorithm;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Queue;
 
 /**
  * @author shine10076
@@ -39,6 +40,5 @@ public class 子集 {
             dfs(nums,i+1,path,res);
             path.remove(path.size()-1);
         }
-
     }
 }
