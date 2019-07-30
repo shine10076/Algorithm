@@ -7,7 +7,7 @@ package com.leetcode.math.algorithm;
 public class 阶乘后的零 {
 
     public int trailingZeroes(int n) {
-        /**
+            /**
          * 2*5 产生一个0，2的数量明显多于5
          * 只需要统计5的个数
          * 5的个数统计方式
