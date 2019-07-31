@@ -11,9 +11,9 @@ public class 链表倒数第k个节点 {
     public ListNode FindKthToTail(ListNode head,int k) {
         ListNode first = head;
         ListNode second = head;
-        for(int i=0;i<k-1;i++)
+        for(int i=0;i<k;i++)
         {
-            if(first.next != null)
+            if(first != null)
             {
                 first = first.next;
             }else
@@ -21,7 +21,7 @@ public class 链表倒数第k个节点 {
                 return null;
             }
         }
-        while (first.next !=null)
+        while (first !=null)
         {
             first=first.next;
             second=second.next;
