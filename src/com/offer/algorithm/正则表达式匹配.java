@@ -8,6 +8,10 @@ public class 正则表达式匹配 {
 
     public boolean match(char[] str, char[] pattern)
     {
+
+        /**
+         * 这是一行不正经的注释
+         */
         return true;
     }
 }
