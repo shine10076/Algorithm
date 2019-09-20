@@ -31,8 +31,7 @@ public class 完全平方数 {
 
 
     /**
-     *
-     * @param n
+     * @Test
      * @return
      */
 
