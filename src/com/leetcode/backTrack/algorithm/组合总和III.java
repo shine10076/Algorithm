@@ -9,6 +9,12 @@ import java.util.List;
  */
 public class 组合总和III {
 
+    /**
+     * 组合求和
+     * @param k
+     * @param n
+     * @return
+     */
     public List<List<Integer>> combinationSum3(int k, int n) {
         List<List<Integer>> res = new ArrayList<>();
         if(n<=0)
