@@ -17,6 +17,9 @@ public class 最大连续1的个数 {
                 cur = 0;
             }
             ++i;
+
+
+
         }
         return max;
     }
