@@ -1,7 +1,5 @@
 package com.leetcode.array.algorithm;
 
-import sun.misc.LRUCache;
-
 /**
  * @author shine10076
  * @date 2019/4/9 22:32
@@ -36,5 +34,7 @@ public class 寻找旋转数组中的最小值 {
     public static void main(String[] args) {
         int[] nums = {4, 5, 6, 0, 1, 2, 3};
         System.out.println(findMin(nums));
+
+
     }
 }

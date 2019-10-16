@@ -19,5 +19,6 @@ public class 寻找重复数 {
             slow = nums[slow];
         }
         return fast;
+
     }
 }
