@@ -16,7 +16,7 @@ public class 最大二叉树 {
     }
 
     /*递归构造二叉子树*/
-    private static TreeNode constructTreeNode(int[] nums, int i, int j) {
+    public static TreeNode constructTreeNode(int[] nums, int i, int j) {
         if (i > j) return null;
         else {
             int maxIndex = maxIndex(nums, i, j);
@@ -27,7 +27,7 @@ public class 最大二叉树 {
         }
     }
 
-    private static int maxIndex(int[] nums, int i, int j) {
+    public static int maxIndex(int[] nums, int i, int j) {
         int maxIndex = i;
         for (int k = i; k <= j; k++) {
             if (nums[maxIndex] < nums[k]) {
