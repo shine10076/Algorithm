@@ -17,7 +17,19 @@ public class 和为K的子数组 {
             sums[i] = sum;
         }
 
-        return 0;
+        int res = 0;
+        for(int i=0;i<nums.length;i++)
+        {
+            for(int j=i;j<nums.length;j++)
+            {
+                if((sums[j]-sums[i]+nums[i])==k)
+                {
+                    res++;
+                }
+            }
+        }
+
+        return res;
     }
 
 }
