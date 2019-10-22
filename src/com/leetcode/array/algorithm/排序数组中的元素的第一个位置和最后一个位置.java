@@ -68,8 +68,8 @@ public class 排序数组中的元素的第一个位置和最后一个位置 {
 
     public static void main(String[] args) {
 
-        int[] nums = new int[]{5,7,7,8,8,10};
-        for(int i : searchRange(nums,8))
+        int[] num = new int[]{5,7,7,8,8,10};
+        for(int i : searchRange(num,8))
         {
             System.out.println(i);
         }
