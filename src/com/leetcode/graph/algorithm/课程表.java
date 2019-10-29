@@ -11,6 +11,7 @@ import java.util.Stack;
  */
 public class 课程表 {
 
+
     public boolean canFinish(int numCourses, int[][] prerequisites) {
 
         ArrayList<Node> list = new ArrayList<>();
@@ -29,19 +30,21 @@ public class 课程表 {
             list.get(start).nexts.add(list.get(end));
         }
 
-        boolean res = true;
+        HashSet<Node> isVisited = new HashSet<>();
+
         for(Node node : list)
         {
-            res &= isCycle(node);
+            if(!isCycle(node,isVisited)) return false;
         }
 
-        return res;
+        return true;
     }
 
 
-    public boolean isCycle(Node node)
+    public boolean isCycle(Node node, HashSet<Node> isVisited)
     {
-        if(node == null) return false;
+        if(isVisited.contains(node)) return true;
+
         Stack<Node> stack = new Stack<>();
         HashSet<Node> set = new HashSet<>();
         stack.push(node);
@@ -52,12 +55,13 @@ public class 课程表 {
             Node cur = stack.pop();
             for(Node next : cur.nexts)
             {
-                if(next == node) return false;
+                if(next == thisNode) return false;
                 if(!set.contains(next))
                 {
                     stack.push(cur);
                     stack.push(next);
                     set.add(next);
+                    isVisited.add(next);
                     break;
                 }
             }
