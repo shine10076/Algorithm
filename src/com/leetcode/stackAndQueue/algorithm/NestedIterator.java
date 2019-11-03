@@ -9,45 +9,57 @@ import java.util.*;
 public class NestedIterator implements Iterator<Integer> {
 
 
-    private int curIndex = 0;
-
-    private NestedInteger cur = null;
 
     private Queue<Integer> queue = null;
 
-    private List<NestedIterator> dataList = null;
 
     public NestedIterator(List<NestedInteger> nestedList) {
 
+        queue = new LinkedList<>();
         if(nestedList == null) return ;
-
-        curIndex = 0;
-        cur = nestedList.get(0);
-
-
-
+        for(NestedInteger cur : nestedList)
+        {
+            queue.addAll(createList(cur));
+        }
 
     }
 
     @Override
     public Integer next() {
-        return 0;
+
+        if(queue.isEmpty())
+        {
+            throw new IndexOutOfBoundsException("非法遍历");
+        }
+
+        int res = queue.poll();
+        return res;
+
     }
 
     @Override
     public boolean hasNext() {
-        return false;
+
+        return !queue.isEmpty();
     }
 
-
-    public void createQueue(Queue<Integer> queue, NestedInteger cur)
+    public List<Integer> createList(NestedInteger nestedInteger)
     {
-        queue = new LinkedList<>();
-        while (!cur.isInteger())
+        List<Integer> res = new ArrayList<>();
+        if(nestedInteger == null ) return res;
+        if(nestedInteger.isInteger())
         {
-
+            res.add(nestedInteger.getInteger());
         }
-
+        else
+        {
+            List<NestedInteger> list = nestedInteger.getList();
+            for(NestedInteger integer : list)
+            {
+                res.addAll(createList(integer));
+            }
+        }
+        return res;
     }
 
 }
