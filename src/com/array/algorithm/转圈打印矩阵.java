@@ -6,5 +6,7 @@ package com.array.algorithm;
  */
 public class 转圈打印矩阵 {
 
+    public static void main(String[] args) {
 
+    }
 }
