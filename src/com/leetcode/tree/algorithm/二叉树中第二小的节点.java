@@ -24,6 +24,7 @@ public class 二叉树中第二小的节点 {
         if (left != -1 && right != -1) return Math.min(left, right);
         if (left != -1) return left;
         return right;
+
     }
 
     public static void main(String[] args) {
