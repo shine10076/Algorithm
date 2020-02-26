@@ -15,7 +15,7 @@ public class 翻转字符串里的单词 {
                 sb.append(" ");
             }
         }
-        if(sb.length() > 0){
+        if(sb.length() > 0) {
             sb.deleteCharAt(sb.length()-1);
         }
         return sb.toString();

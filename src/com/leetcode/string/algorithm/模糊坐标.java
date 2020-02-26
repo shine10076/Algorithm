@@ -69,7 +69,7 @@ public class 模糊坐标 {
     }
 
     public boolean isRight(String r){
-        if(r.endsWith("0")){
+        if(r.endsWith("0")) {
             return false;
         }
         return true;
