@@ -9,80 +9,37 @@ import java.util.Queue;
  */
 public class 岛屿的最大面积 {
 
-    public static int maxAreaOfIsland(int[][] grid) {
-        int row = grid.length, col = grid[0].length;
-        boolean[][] isVisit = new boolean[row][col];
+    public int[][] direction = new int[][]{
+            {1,0},{0,1},{-1,0},{0,-1}
+    };
+
+    public int maxAreaOfIsland(int[][] grid) {
+        if(grid == null || grid.length < 1){
+            return 0;
+        }
         int res = 0;
-        for(int i=0;i<row;i++)
-            for (int j=0;j<col;j++)
-            {
-                if(grid[i][j]==1&&isVisit[i][j]==false)
-                {
-                    res = Math.max(res, dfs(grid,i,j,row,col,isVisit));
+        for(int i=0;i<grid.length;i++){
+            for(int j=0;j<grid[0].length;j++){
+                if(grid[i][j] == 1){
+                    res = Math.max(res,dfs(grid,i,j));
                 }
             }
-
-        return res;
-    }
-
-
-    public static int dfs(int[][] grid, int i, int j, int row, int col,boolean[][] isVisit)
-    {
-        int res = 0;
-        Point root = new Point(i,j);
-        Queue<Point> queue = new LinkedList<>();
-        isVisit[i][j] = true;
-        queue.offer(root);
-        while(!queue.isEmpty())
-        {
-            Point point = queue.poll();
-            res++;
-            if(point.x+1<row && grid[point.x+1][point.y]==1&&isVisit[point.x+1][point.y]==false)
-            {
-                queue.offer(new Point(point.x+1, point.y));
-                isVisit[point.x+1][point.y] = true;
-            }
-            if(point.y+1<col && grid[point.x][point.y+1]==1&&isVisit[point.x][point.y+1]==false)
-            {
-                queue.offer(new Point(point.x, point.y+1));
-                isVisit[point.x][point.y+1] = true;
-            }
-            if(point.y-1>=0 && grid[point.x][point.y-1]==1&&isVisit[point.x][point.y-1]==false)
-            {
-                queue.offer(new Point(point.x, point.y-1));
-                isVisit[point.x][point.y-1] = true;
-            }
-            if(point.x-1>=0 && grid[point.x-1][point.y]==1&&isVisit[point.x-1][point.y]==false)
-            {
-                queue.offer(new Point(point.x-1, point.y));
-                isVisit[point.x-1][point.y] = true;
-            }
-
         }
 
         return res;
     }
 
-     static class Point {
-        int x;
-        int y;
-        Point(int x, int y)
-        {
-            this.x = x;
-            this.y = y;
+    public int dfs(int[][] grid, int i, int j){
+        int res = 1;
+        grid[i][j] = 2;
+        for(int[] d : direction){
+            if((i+d[0]>=0)&&(i+d[0]<grid.length)&&(j+d[1]>=0)&&(j+d[1]<grid[0].length)){
+                if(grid[i+d[0]][j+d[1]] == 1){
+                    res += dfs(grid,i+d[0],j+d[1]);
+                }
+            }
         }
-        public String toString()
-        {
-            return x+":"+y;
-        }
+        return res;
     }
 
-    public static void main(String[] args) {
-        int[][] grid = new int[][]{
-                {0,1},
-                {1,1}
-        };
-        System.out.println(maxAreaOfIsland(grid));
-
-    }
 }
