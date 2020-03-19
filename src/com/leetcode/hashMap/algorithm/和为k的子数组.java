@@ -2,6 +2,7 @@ package com.leetcode.hashMap.algorithm;
 
 import java.util.HashMap;
 
+
 /**
  * @author shine10076
  * @date 2019/10/20 14:38
@@ -36,6 +37,10 @@ public class 和为k的子数组 {
         }
 
         return ans;
+
+    }
+
+    public static void main(String[] args) {
 
     }
 }
