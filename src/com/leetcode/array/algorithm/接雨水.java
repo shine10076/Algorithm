@@ -1,5 +1,7 @@
 package com.leetcode.array.algorithm;
 
+import java.util.Arrays;
+
 /**
  * @author shine10076
  * 2019/12/4 16:29
@@ -12,45 +14,40 @@ public class 接雨水 {
      * @param height ： 高度数组
      * @return
      */
-    public int trap(int[] height) {
-        if(height == null || height.length < 1){
-            return 0;
-        }
+    public static int trap(int[] height) {
+        if(height == null || height.length < 1) return 0;
         int[] left = new int[height.length];
         int[] right = new int[height.length];
-        int L = 0;
-        for(int i=0;i<height.length;i++){
-            if(L < height[i]){
-                left[i] = -1;
+        Arrays.fill(left,-1);
+        Arrays.fill(right,-1);
+        int L = -1;
+        for(int i = 0;i < height.length;i++){
+            if(height[i] > L){
                 L = height[i];
-            }else
-            {
+            }else{
                 left[i] = L;
             }
         }
-        int R = 0;
-        for(int i=height.length-1;i>=0;i--){
-            if(R < height[i]){
-                right[i] = -1;
+        int R = -1;
+        for(int i = height.length-1;i >= 0;i--){
+            if(height[i] > R){
                 R = height[i];
-            }else
-            {
+            }else{
                 right[i] = R;
             }
         }
-
-        int area = 0;
-        for(int i=0;i<height.length;i++){
-            int tmp = 0;
-            if(left[i]==-1 || right[i] == -1)
-            {
-                tmp = 0;
-            }else{
-                tmp = Math.min(left[i],right[i]) - height[i];
+        int res = 0;
+        for(int i = 0;i < height.length;i++){
+            if(left[i] != -1 && right[i] != -1){
+                res += (Math.min(left[i],right[i]) - height[i]);
             }
-            area += tmp;
         }
 
-        return area;
+        return res;
+    }
+
+    public static void main(String[] args) {
+        int[] height = new int[]{2,0,2};
+        System.out.println(trap(height));
     }
 }
