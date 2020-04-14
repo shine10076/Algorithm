@@ -1,6 +1,7 @@
 package com.leetcode.greedy.algorithm;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -29,7 +30,6 @@ public class 单调递增的数 {
             ans *= 10;
             ans += res.get(i);
         }
-        List<Integer> list1 = new ArrayList<>();
         return ans;
     }
 }
