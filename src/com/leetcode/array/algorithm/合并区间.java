@@ -15,14 +15,11 @@ public class 合并区间 {
         {
             return new int[0][0];
         }
-        Arrays.sort(intervals, new Comparator<int[]>() {
-            @Override
-            public int compare(int[] o1, int[] o2) {
-                if(o1[0]!=o2[0])
-                {
-                   return o1[0]-o2[0];
-                }
-                return o1[1]-o2[1];
+        Arrays.sort(intervals, (int[] o1, int[] o2)->{
+            if(o1[0] == o2[0]){
+                return o1[1] - o2[1];
+            }else{
+                return o1[0] - o2[0];
             }
         });
         ArrayList<Interval> list = new ArrayList<>();
